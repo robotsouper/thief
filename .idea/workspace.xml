@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e6c268d9-d728-4251-ba98-95b2f796ea31" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../face" beforeDir="false" afterPath="$PROJECT_DIR$/../face" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../location/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../location/application/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../location/application/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../location/application/output.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../location/application/util copy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../location/output.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mpc-web-main-new" beforeDir="false" afterPath="$PROJECT_DIR$/../mpc-web-main-new" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrawler/.idea/clear.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrawler/.idea/login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrawler/.idea/output/desc/sorting_base_on_forks.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrawler/.idea/output/desc/sorting_base_on_likes.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrawler/.idea/output/desc/sorting_base_on_matches.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrawler/.idea/output/desc/sorting_base_on_updated.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrawler/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../scrawler/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrawler/.idea/web.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrawler/使用指南/帅哥范的数据窃贼指南.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../scrawler/使用指南/帅哥范的数据窃贼指南.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/wsy/中年油腻大叔.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/wsy/也觉得自己很帅.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/wsy/多大个人了还当秋千.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/wsy/师傅有妖精.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/wsy/觉得自己很帅.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/zya/玉面书生.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/zya/邪魅自拍.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/zya/邻家男孩.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/不是人脸/no1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/不是人脸/no2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/不是人脸/no3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/黑种人/lbj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../后端/test/黑种人/lbj2.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SmZbtJf5x3mJn6eR6EaF5imPtE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/shixi/frontend&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6c268d9-d728-4251-ba98-95b2f796ea31" name="Changes" comment="" />
+      <created>1689753800256</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1689753800256</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
