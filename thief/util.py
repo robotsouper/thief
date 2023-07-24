@@ -74,4 +74,4 @@ def modify_excel(file1, file2):
     df1 = df1[~((df1['Email'] == "无") & (df1['Phone'] == "无"))]
     df1.to_excel("确认公司信息.xlsx", index=False)
 
-modify_excel("company_contacts.xlsx","combined_creditlist.xlsx")
+print(pd.__version__)
