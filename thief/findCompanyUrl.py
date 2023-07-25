@@ -7,11 +7,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import urllib.parse
 
-wb = load_workbook('shopname.xlsx')
+wb = load_workbook('combined_result.xlsx')
 ws = wb.active
 
-# Initialize dictionary to hold company names and their URLs
-company_info = {}
+company_info = []
 
 # Base URL
 base_url = "https://www.tianyancha.com/search?key="
@@ -19,8 +18,9 @@ base_url = "https://www.tianyancha.com/search?key="
 # Start the WebDriver
 driver = webdriver.Chrome()
 
-for row in ws.iter_rows(min_row=2, max_row=2765, min_col=2, max_col=2):
-    name = row[0].value
+for row in ws.iter_rows(min_row=2, max_row=1286, min_col=1, max_col=2):
+    image_name = row[0].value
+    name = row[1].value
     if name:
         driver.get(base_url + urllib.parse.quote(name))
         time.sleep(3)
@@ -30,21 +30,19 @@ for row in ws.iter_rows(min_row=2, max_row=2765, min_col=2, max_col=2):
             search_result = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, ".index_alink__zcia5.link-click")))
             company_url = search_result.get_attribute('href')
-            company_name = search_result.text
 
-            if company_url and name == company_name:
-                company_info[name] = company_url
+            # Get company name from website
+            website_company_name = search_result.find_element(By.TAG_NAME, 'span').text
+
+            if company_url:  # &&name==website_company_name
+                company_info.append([image_name, name, company_url, website_company_name])
             else:
-                company_info[name] = '无'
+                company_info.append([image_name, name, '无', '无'])
 
         except Exception as e:
             print(f"An error occurred: {e}")
-            company_info[name] = '无'
-
+            company_info.append([image_name, name, '无', '无'])
 driver.quit()
 
-# Create a new DataFrame with the company names and URLs
-df_urls = pd.DataFrame(list(company_info.items()), columns=['CompanyName', 'CompanyURL'])
-
-# Write the DataFrame to an Excel file
-df_urls.to_excel("company_urls(exact).xlsx", index=False)
+df_urls = pd.DataFrame(company_info, columns=['ImageName', 'Code', 'TYC_URL', 'CompanyName'])
+df_urls.to_excel("CompanyAndTrust.xlsx", index=False)

@@ -6,24 +6,24 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-wb = load_workbook('combined_creditlist.xlsx')
+wb = load_workbook('trust_filtered.xlsx')
 ws = wb.active
 
 url_email_phone = {}
 
 driver = webdriver.Chrome()
 count = 1
-for row in ws.iter_rows(min_row=2, max_row=675, values_only=True):
+for row in ws.iter_rows(min_row=2, max_row=1238, values_only=True):
     print("Now in row: ", count)
     count += 1
-    url = row[1]
+    url = row[2]
     if url != "无":
         driver.get(url)
         time.sleep(1)
 
         try:
             # Find the email address
-            email_element = WebDriverWait(driver, 5).until(
+            email_element = WebDriverWait(driver, 3).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, ".index_detail-email__B_1Tq")))
             email = email_element.text if email_element else '无'
 
@@ -44,4 +44,4 @@ driver.quit()
 df_contacts = pd.DataFrame.from_dict(url_email_phone, orient='index', columns=['Email', 'Phone'])
 
 # Write the DataFrame to an Excel file
-df_contacts.reset_index().rename(columns={'index': 'URL'}).to_excel("company_contacts.xlsx", index=False)
+df_contacts.reset_index().rename(columns={'index': 'URL'}).to_excel("后来的contact.xlsx", index=False)

@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 
 # only handle the case where the input file is .xlsx file and there are only two column
@@ -75,3 +76,38 @@ def modify_excel(file1, file2):
     df1.to_excel("确认公司信息.xlsx", index=False)
 
 
+
+def delete_matching_images():
+    # Load the data from the excel files
+    shop_df = pd.read_excel('shopname.xlsx')
+    combined_result_df = pd.read_excel('combined_result.xlsx')
+
+    # Find rows in combined_result where the 'file_name' matches any 'Shop Name' in shopname.xlsx
+    matching_rows = combined_result_df[combined_result_df['file_name'].isin(shop_df['Shop Name'])]
+
+    # Loop through these rows
+    for index, row in matching_rows.iterrows():
+        # Construct the filename based on the 'file_name' column
+        image_filename = row['file_name']
+        image_path = os.path.join('trust', image_filename)
+
+        # Check if this file exists
+        if os.path.isfile(image_path):
+            # If it does, delete it
+            os.remove(image_path)
+            print(f"Image {image_filename} removed.")
+        else:
+            print(f"Image {image_filename} does not exist.")
+
+
+
+def add_column():
+    shop_df = pd.read_excel('后来的contact.xlsx')
+    results_df = pd.read_excel('trust_filtered.xlsx')
+
+    merged_df = pd.merge(shop_df, results_df, on='URL', how='left')
+
+    merged_df.to_excel('111111.xlsx', index=False)
+
+
+add_column()

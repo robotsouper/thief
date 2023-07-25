@@ -1,8 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6c268d9-d728-4251-ba98-95b2f796ea31" name="Changes" comment="111">
+    <list default="true" id="e6c268d9-d728-4251-ba98-95b2f796ea31" name="Changes" comment="image">
+      <change afterPath="$PROJECT_DIR$/thief/BDImageDetect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thief/combined_result.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thief/excels/111111.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thief/excels/111111_clean.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thief/excels/CompanyAndTrust.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thief/shopname - Copy.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thief/testttt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thief/trust_filtered.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thief/后来的contact.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thief/汇总.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thief/统一.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/findCompanyUrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/thief/findCompanyUrl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/findEmailandPhone.py" beforeDir="false" afterPath="$PROJECT_DIR$/thief/findEmailandPhone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/shopname.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/thief/shopname.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/testtest.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1078.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1082.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1104.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1127.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1242.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1263.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1380.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1402.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1416.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1459.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1468.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1538.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1653.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1660.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1685.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1757.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_1919.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2008.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2022.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2051.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2072.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2126.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2139.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2185.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2189.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2234.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2257.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2284.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2397.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2401.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_241.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2426.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2469.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2496.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2534.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2604.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2622.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_264.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2654.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_271.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2717.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_2719.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_311.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_442.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_569.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_661.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_701.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_792.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_830.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_837.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_862.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_871.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_902.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_952.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/trust/img_984.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thief/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/thief/util.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690165228685</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="image">
+      <created>1690166531355</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690166531355</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,6 +163,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="111" />
-    <option name="LAST_COMMIT_MESSAGE" value="111" />
+    <MESSAGE value="image" />
+    <option name="LAST_COMMIT_MESSAGE" value="image" />
   </component>
 </project>
