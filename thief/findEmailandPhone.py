@@ -6,37 +6,43 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-wb = load_workbook('trust_filtered.xlsx')
+wb = load_workbook('filtered_urls.xlsx')
 ws = wb.active
 
 url_email_phone = {}
 
 driver = webdriver.Chrome()
 count = 1
-for row in ws.iter_rows(min_row=2, max_row=1238, values_only=True):
+for row in ws.iter_rows(min_row=2, max_row=250, values_only=True):
     print("Now in row: ", count)
     count += 1
-    url = row[2]
+    url = row[0]
     if url != "无":
         driver.get(url)
         time.sleep(1)
 
-        try:
-            # Find the email address
-            email_element = WebDriverWait(driver, 3).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, ".index_detail-email__B_1Tq")))
-            email = email_element.text if email_element else '无'
+    email="无"
+    phone="无"
+    try:
+        phone_element = WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, '[class^="index_detail-tel__"]')))
+        phone = phone_element.text if phone_element else '无'
 
-            # Find the phone number
-            phone_element = WebDriverWait(driver, 5).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, ".index_detail-tel__fgpsE")))
-            phone = phone_element.text if phone_element else '无'
+    except Exception as e:
+        print(f"Error occurred while fetching phone number: {str(e)}")
 
-            url_email_phone[url] = [email, phone]
+    try:
+        email_element = WebDriverWait(driver, 3).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, ".index_detail-email__B_1Tq")))
+        email = email_element.text if email_element else '无'
 
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            url_email_phone[url] = ['无', '无']
+    except Exception as e:
+        print(f"Error occurred while fetching email: {str(e)}")
+
+
+    url_email_phone[url] = [email, phone]
+
+
 
 driver.quit()
 
@@ -44,4 +50,4 @@ driver.quit()
 df_contacts = pd.DataFrame.from_dict(url_email_phone, orient='index', columns=['Email', 'Phone'])
 
 # Write the DataFrame to an Excel file
-df_contacts.reset_index().rename(columns={'index': 'URL'}).to_excel("后来的contact.xlsx", index=False)
+df_contacts.reset_index().rename(columns={'index': 'URL'}).to_excel("后来的我们.xlsx", index=False)
