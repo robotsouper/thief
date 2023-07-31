@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-from thief.util import process_file
+from util import process_file
 
 
 def get_shop_name(url):
@@ -24,23 +24,27 @@ def get_links_from_homepage(url):
 
 
 def main():
-    file_name = '总1.xlsx'
+    try:
+        file_name = '总1.xlsx'
 
     # Check if the file exists. If it does, load the data into a DataFrame. Otherwise, create a new DataFrame.
-    if os.path.exists(file_name):
-        df = pd.read_excel(file_name)
-    else:
-        df = pd.DataFrame(columns=['URL', 'Shop Name'])
+        if os.path.exists(file_name):
+            df = pd.read_excel(file_name)
+        else:
+            df = pd.DataFrame(columns=['URL', 'Shop Name'])
 
-    for page_number in range(150, 225):
-        home_url = f"https://talent.epwk.com/wuxian/page{page_number}.html"
-        print("Now getting into page: ", page_number)
-        links = get_links_from_homepage(home_url)
-        for link in links:
-            shop_name = get_shop_name(link)
-            new_df = pd.DataFrame({'URL': [link], 'Shop Name': [shop_name]})
-            df = pd.concat([df, new_df], ignore_index=True)
-            print(f"Processed shop: {shop_name} at {link}")
+        for page_number in range(150, 225):
+            home_url = f"https://talent.epwk.com/wuxian/page{page_number}.html"
+            print("Now getting into page: ", page_number)
+            links = get_links_from_homepage(home_url)
+            for link in links:
+                shop_name = get_shop_name(link)
+                new_df = pd.DataFrame({'URL': [link], 'Shop Name': [shop_name]})
+                df = pd.concat([df, new_df], ignore_index=True)
+                print(f"Processed shop: {shop_name} at {link}")
+    except Exception as e:
+        df.toexcel(file_name, index=False)
+        print("Stopped at page number", page_number)
 
     # Save the DataFrame
     df.to_excel(file_name, index=False)

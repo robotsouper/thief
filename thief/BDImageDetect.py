@@ -37,7 +37,7 @@ def process_image(file_path):
 
 
 if __name__ == '__main__':
-    folder_path = "trust"  # Your image folder
+    folder_path = "trust"
     all_files = os.listdir(folder_path)
     image_files = [f for f in all_files if f.endswith(('.jpg', '.png', '.jpeg'))]
     image_files = image_files[850:]

@@ -34,7 +34,7 @@ for row in ws.iter_rows(min_row=2, max_row=1286, min_col=1, max_col=2):
             # Get company name from website
             website_company_name = search_result.find_element(By.TAG_NAME, 'span').text
 
-            if company_url:  # &&name==website_company_name
+            if company_url: #&&name==website_company_name
                 company_info.append([image_name, name, company_url, website_company_name])
             else:
                 company_info.append([image_name, name, '无', '无'])

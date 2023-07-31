@@ -21,28 +21,25 @@ for row in ws.iter_rows(min_row=2, max_row=250, values_only=True):
         driver.get(url)
         time.sleep(1)
 
-    email="无"
-    phone="无"
+    email = "无"
+    phone = "无"
     try:
         phone_element = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, '[class^="index_detail-tel__"]')))
-        phone = phone_element.text if phone_element else '无'
+        phone = phone_element.text
 
     except Exception as e:
-        print(f"Error occurred while fetching phone number: {str(e)}")
+        print(f"Cannot get phone number: {str(e)}")
 
     try:
         email_element = WebDriverWait(driver, 3).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, ".index_detail-email__B_1Tq")))
-        email = email_element.text if email_element else '无'
+            EC.presence_of_element_located((By.CSS_SELECTOR, ".index_detail-email__B_1Tq")))
+        email = email_element.text
 
     except Exception as e:
-        print(f"Error occurred while fetching email: {str(e)}")
-
+        print(f"Cannot get email: {str(e)}")
 
     url_email_phone[url] = [email, phone]
-
-
 
 driver.quit()
 
