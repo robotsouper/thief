@@ -4,6 +4,7 @@ import urllib
 import requests
 import pandas as pd
 
+
 API_KEY = ""
 SECRET_KEY = ""
 
