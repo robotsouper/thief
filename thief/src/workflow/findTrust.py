@@ -8,11 +8,14 @@ import re
 
 driver = webdriver.Chrome()
 
+# Adjust the path for 'trust' directory to be inside 'work_flow_io'
+if not os.path.exists('../work_flow_io/trust'):
+    os.makedirs('../work_flow_io/trust')
 
-if not os.path.exists('trust'):
-    os.makedirs('trust')
-
-df = pd.read_excel('shopname.xlsx')
+# Load the workbook from work_flow_io folder
+print("here 1")
+df = pd.read_excel('../work_flow_io/shopname.xlsx')
+print("here2")
 urls = df.iloc[:, 0].tolist()  # Assuming URLs are in the first column
 
 # Create a DataFrame to store URLs and corresponding image filenames
@@ -40,7 +43,8 @@ for idx, url in enumerate(urls):
 
             response = requests.get(img_url)
             img_data = response.content
-            filename = f'trust/img_{idx + 1}_{shop_name}.png'
+            # Adjust the path to save the image inside 'work_flow_io/trust' directory
+            filename = f'../work_flow_io/trust/img_{idx + 1}_{shop_name}.png'
             with open(filename, 'wb') as handler:
                 handler.write(img_data)
 
@@ -58,5 +62,5 @@ for idx, url in enumerate(urls):
 
 driver.quit()
 
-
-image_df.to_excel('image_records.xlsx', index=False)
+# Save the results to the work_flow_io folder
+image_df.to_excel('../work_flow_io/image_records.xlsx', index=False)

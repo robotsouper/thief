@@ -38,7 +38,7 @@ def process_image(file_path):
 
 
 if __name__ == '__main__':
-    folder_path = "trust" 
+    folder_path = "../work_flow_io/trust_filtered"
     all_files = os.listdir(folder_path)
     image_files = [f for f in all_files if f.endswith(('.jpg', '.png', '.jpeg'))]
     image_files = image_files[850:]
@@ -57,4 +57,5 @@ if __name__ == '__main__':
             print(f"No 'words_result' or '社会信用代码' found in image: {image_file}. Skipping this image.")
 
     df = pd.DataFrame(results)
-    df.to_excel('results1.xlsx', index=False)  # Save the results to an Excel file
+    df.to_excel('../work_flow_io/results1.xlsx', index=False)
+

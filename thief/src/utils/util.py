@@ -42,8 +42,10 @@ def modify_excel(small_file, large_file):
 
 
 def combine_excel(file1, file2):
+    # Read the excel files
     df1 = pd.read_excel(file1)
     df2 = pd.read_excel(file2)
+
     # Add a temporary 'source' column to each DataFrame to track where they come from
     df1['source'] = 1
     df2['source'] = 2
@@ -53,15 +55,21 @@ def combine_excel(file1, file2):
     df['check'] = df.apply(lambda row: "无" in row.values, axis=1)
     df = df.drop(columns=['check'])
     df['credit'] = df.duplicated(subset=df.columns.difference(['source']), keep=False).astype(int)
+
     df = df.drop(columns=['source'])
+
     df = df.drop_duplicates()
+
     df = df.sort_values(by='credit', ascending=False)
+
     df.to_excel("new_file.xlsx", index=False)
+
 
 
 def modify_excel(file1, file2):
     df1 = pd.read_excel(file1)
     df2 = pd.read_excel(file2)
+
     df1 = pd.merge(df1, df2[['URL', 'CompanyName']], on='URL', how='left')
     df1 = df1.rename(columns={'CompanyName': '公司名称'})
     df1 = df1[~((df1['Email'] == "无") & (df1['Phone'] == "无"))]
@@ -70,11 +78,14 @@ def modify_excel(file1, file2):
 
 
 def delete_matching_images():
+    # Load the data from the excel files
     shop_df = pd.read_excel('shopname.xlsx')
     combined_result_df = pd.read_excel('combined_result.xlsx')
+
     # Find rows in combined_result where the 'file_name' matches any 'Shop Name' in shopname.xlsx
     matching_rows = combined_result_df[combined_result_df['file_name'].isin(shop_df['Shop Name'])]
 
+    # Loop through these rows
     for index, row in matching_rows.iterrows():
         # Construct the filename based on the 'file_name' column
         image_filename = row['file_name']
@@ -82,6 +93,7 @@ def delete_matching_images():
 
         # Check if this file exists
         if os.path.isfile(image_path):
+            # If it does, delete it
             os.remove(image_path)
             print(f"Image {image_filename} removed.")
         else:
@@ -98,3 +110,4 @@ def add_column():
     merged_df.to_excel('111111.xlsx', index=False)
 
 
+add_column()
